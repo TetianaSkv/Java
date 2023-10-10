@@ -1,63 +1,36 @@
-package Homerwork.HW_260923;
+package Homerwork.HW_280923;
 
 public class Phone {
-    private int Number;
-    private String Model;
-    private int Weight;
-    private String Name;
 
+    private String phoneName;
 
-    public Phone(int number, String model, int weight) {
-        Number = number;
-        Model = model;
-        Weight = weight;
-    }
-
-
-    public void receiveCall(String Name){
-        System.out.println("Звонит " + Name);
-
-    }
+    private int number;
 
     public int getNumber() {
-        return Number;
+        return number;
     }
 
     public void setNumber(int number) {
-        Number = number;
+        this.number = number;
     }
 
-    public String getModel() {
-        return Model;
+    public String getPhoneName() {
+        return phoneName;
     }
 
-    public void setModel(String model) {
-        Model = model;
+    public void setPhoneName(String phoneName) {
+        this.phoneName = phoneName;
     }
 
-    public int getWeight() {
-        return Weight;
+    public void call(int number){
+        System.out.println("try to make a call to number " + number);
     }
 
-    public void setWeight(int weight) {
-        Weight = weight;
+    public void receiveCall(int number){
+        System.out.println("try to receive a call from number " + number);
     }
 
-    public String getName() {
-        return Name;
-    }
+    public void makeCall(){
 
-    public void setName(String name) {
-        Name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "Phone{" +
-                "Number=" + Number +
-                ", Model='" + Model + '\'' +
-                ", Weight=" + Weight +
-                ", Name='" + Name + '\'' +
-                '}';
     }
 }
